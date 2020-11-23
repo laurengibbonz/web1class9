@@ -25,15 +25,9 @@ const quiz = {
 };
 
 //Challenge 1: Console first question
-console.log(quiz['questions'][0]['question']);
 
 //Challenge 2: Console all choices for first question
-let choices = quiz['questions'][0]['choices'];
-for(let i = 0; i < choices.length; i++) {
-    console.log(choices[i]);
-    const choicesDiv = document.getElementById('choices');
-    choicesDiv.innerHTML += `<h3 data->${choices[i]}</h3>`;
-}
+
 
 </script>
 </body>
