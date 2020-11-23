@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Objects</title>
+</head>
+<body>
+
+<section id="quiz">
+    <h2 id="question"></h2>
+    <div id="choices"></div>
+    <button id="submit">Submit</button>
+</section>
+
+<script>
+const quiz = {
+    questions: [{
+        question: 'What is the capital of New York?',
+        choices: ['Albany', 'New York City', 'Woodstock', 'Westchester'],
+        answer: 0
+    }, {
+        question: 'When was SVA founded?',
+        choices: [2000, 1960, 1947, 1912],
+        answer: 2
+    }],
+};
+
+//Challenge 1: Console first question
+console.log(quiz['questions'][0]['question']);
+
+//Challenge 2: Console all choices for first question
+let choices = quiz['questions'][0]['choices'];
+for(let i = 0; i < choices.length; i++) {
+    console.log(choices[i]);
+    const choicesDiv = document.getElementById('choices');
+    choicesDiv.innerHTML += `<h3 data->${choices[i]}</h3>`;
+}
+
+</script>
+</body>
+</html>
