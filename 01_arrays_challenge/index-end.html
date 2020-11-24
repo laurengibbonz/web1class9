@@ -4,21 +4,37 @@
     <title>Arrays</title>
 </head>
 <body>
-    <div id="demo"></div>
+    <div id="demo">
+        <h3>Cat 1</h3>
+    </div>
 
 <script>
-let cats = ["Smokie", "Kitty", "Tiger"];
+let cats = ["Smokie", "Kitty", "Tiger", "Hillary"];
 //Challenge 1: Add a new cat to the end of array then console log array
 //(Hint: use push)
+cats.push("Chloe");
 console.log(cats);
 
 //Challenge 2: Remove the first cat (Hint: use shift)
+cats.shift();
+console.log(cats);
 
 //Challenge 3: Make a new array and combine the two arrays (Hint: use concat)
+let newCats = ["Tom", "Steve"];
+cats = cats.concat(newCats);
+console.log(cats);
 
 //Challenge 4: Order the cats in alphabetical order 
+cats.sort();
+console.log(cats);
 
 //Challenge 5 (Bonus): Use forEach to update demo innerHTML with elements in cats array
+cats.forEach(function(element, index) {
+    console.log(element);
+    console.log(index);
+    document.getElementById('demo').innerHTML += `<h3>${element}</h3>`;
+});
+// console.log(cats);
 
 </script>
 </body>
